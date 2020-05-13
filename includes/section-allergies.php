@@ -38,7 +38,9 @@ if (have_posts()) :
   <?php
     $tags = get_the_tags();
     if($tags):
-    foreach($tags as $tag):?>
+    foreach($tags as $tag):
+  ?>
+
       <a class="text-dark" href="<?php echo get_tag_link($tag -> term_id);  ?>">
         <?php echo $tag -> name; ?>
       </a>

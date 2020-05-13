@@ -17,7 +17,6 @@
       <?php dynamic_sidebar('page-sidebar'); ?>
       <?php endif; ?>
     </div>
-      
     </section>
     </div>
   </section>
