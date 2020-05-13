@@ -1,5 +1,4 @@
-<footer class="bg-dark text-info jumbotron container">
-  <div class="container">
+<footer class="sticky-footer m-0  myfooter text-info jumbotron">
   <?php
   // wp_nav_menu(
   //   array(
@@ -9,12 +8,8 @@
   //   )
   // );
   ?>
-</div>
-
-  copyright@2020
-
+  <div>copyright@2020</div>
   <p>facebook </p> <p>twitter </p>
-
 </footer>
 
 <?php wp_footer(); ?>

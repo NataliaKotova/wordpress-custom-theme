@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<div class="jumbotron"><?php get_header('secondary'); ?></div>
 
 <section class="page-wrap">
 <div class="container">
@@ -19,9 +19,6 @@
       <!-- Pagination Method 1 -->
    <?php previous_posts_link();  ?>
    <?php next_posts_link();  ?>
-
-
-
    <!-- Pagination Method 2 -->
    <?php
       // global $wp_query;
@@ -32,7 +29,6 @@
       //   'current' => max(1, get_query_var('paged')),
       //   'total' => $wp_query -> max_num_pages
       // ));
-
    ?>
    </div>
 </section>

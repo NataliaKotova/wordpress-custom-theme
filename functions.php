@@ -78,7 +78,7 @@ function my_first_post_type(){
         'singular_name' => 'Allergy',
     ),
   'hierarchical' => true, //booleans value toggles between pages & posts without labels
-  'menu_icon' => 'dashicons-palmtree',
+  'menu_icon' => 'dashicons-buddicons-replies',
   'public' => true,
   'has_archive' => true,
   'supports' => array('title', 'editor', 'thumbnail','custom-fields'),// if one of the argument is  not mentioned,
