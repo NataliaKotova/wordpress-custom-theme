@@ -1,4 +1,4 @@
-<div class="jumbotron"><?php get_header('secondary'); ?></div>
+<?php get_header(''); ?>
 
 <section class="page-wrap">
 <div class="container">
