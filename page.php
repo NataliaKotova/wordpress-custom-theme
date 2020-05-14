@@ -1,4 +1,4 @@
-<?php get_header(''); ?>
+<?php get_header('secondary'); ?>
 <section class="page-wrap">
 <div class="container">
   <section class="row">

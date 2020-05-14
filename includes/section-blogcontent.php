@@ -1,11 +1,11 @@
-<div class="bg-info">
+<div class="">
 <?php
 if (have_posts()) :
   while (have_posts()):
     the_post();
 ?>
 
-<p class="text-light">
+<p class="">
 <?php  echo get_the_date('l, h:i:s d/m/Y'); //check php date format ?>
 </p>
 

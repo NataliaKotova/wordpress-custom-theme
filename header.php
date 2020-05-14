@@ -6,9 +6,9 @@
     <?php wp_head(); ?><!-- notice the wordpress admin bar on top-->
   </head>
   <body>
-    <header class="jumbotron m-0 p-0">
+    <header>
 
-      <div class="container m-0">
+      <div class="container ">
       <?php
       wp_nav_menu(
         array(
@@ -20,5 +20,3 @@
       ?>
     </div>
     </header>
-
-

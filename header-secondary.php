@@ -6,6 +6,17 @@
     <?php wp_head(); ?><!-- notice the wordpress admin bar on top-->
   </head>
   <body>
+    <header>
 
-
-
+      <div class="container ">
+      <?php
+      wp_nav_menu(
+        array(
+        'theme_location' => 'top-menu',
+       //  'menu' => 'Top Bar',
+        'menu_class' => 'top-bar'
+        )
+      );
+      ?>
+    </div>
+    </header>

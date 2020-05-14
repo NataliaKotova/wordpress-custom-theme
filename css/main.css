@@ -1,6 +1,7 @@
 header{
     width:100%;
-    height: auto;
+    height: 100px;
+    background:#111;
   }
   .widget{
     list-style-type: none;
@@ -20,6 +21,7 @@ header{
   }
   .top-bar a{
     padding: 0.25rem 1rem;
+    color:white;
   }
   .top-bar li .sub-menu{
     /* margin-left: 135px; */
@@ -40,58 +42,13 @@ header{
     padding-bottom: 50px;
   }
   .footer {
-    /* height: 50px; */
-    height:auto;
-    margin-top: -50px;
-    margin-bottom:0;
-  }
-
-/* html, body {
-    height:100%;
-    margin:0;
-}
-
-.page-wrap{
-    overflow:auto;
-}
-
-.container {
-    padding: 20px;
-    padding-bottom: 50px;
-  }
-  .footer {
-    height: auto;
+    height: 50px;
     margin-top: -50px;
   }
 
-
-.custom-menu-class ul li {
-    list-style: none;
-    display: inline;
-    margin-left: 3em;
-    font-weight: bold;
-}
-
-.custom-menu-class ul li a {
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-} */
-
-
-
-/* .footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    margin-bottom: -3em;
-} */
-
-/* .myfooter{
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;   
-} */
+  .thumbnail-image{
+      width:7em;
+      height:auto;
+      display:block;
+      margin:0 auto;
+  }
