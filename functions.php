@@ -111,5 +111,42 @@ function my_first_taxonomy(){
 add_action('init', 'my_first_taxonomy');
 
 function add_google_fonts() {
-  wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}
-  add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+  wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}  
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
+=================================== customizations ===================================
+
+
+function mytheme_customize_register( $wp_customize ) {
+  //All our sections, settings, and controls will be added here
+    $wp_customize->add_setting( 'header_color' , array(
+        'default'   => '#000000',
+        'transport' => 'refresh',
+    ) );
+
+    $wp_customize->add_section( 'C' , array(
+      'title'      => __( 'Header background color', 'Charity Theme' ),
+      'priority'   => 30,
+    ) );
+    
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_color', array(
+      'label'      => __( 'Header Color', 'mytheme' ),
+      'section'    => 'C',
+      'settings'   => 'header_color',
+    ) ) );
+}
+
+add_action( 'customize_register', 'mytheme_customize_register' );
+
+function mytheme_customize_css()
+{
+    ?>
+         <style type="text/css">
+              header { background-color: <?php echo get_theme_mod('header_color', '#ffffff'); ?>; }
+         </style>
+    <?php
+}
+add_action( 'wp_head', 'mytheme_customize_css');
+
+
+
