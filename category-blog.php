@@ -2,10 +2,15 @@
 <section class="page-wrap">
    <div class="container">
       <section class="row">
+         <div class="col-lg-3 widget">
+            <?php if(is_active_sidebar('blog-sidebar')) :?>
+            <?php dynamic_sidebar('blog-sidebar'); ?>
+            <?php endif; ?>
+         </div>
          <div class="col-lg-9 widget">
-            <h1 class="display-4">Blog</h1>
-               <?php get_template_part('includes/section','archive'); ?>
-               <!-- Pagination Method 1 -->
+            <h1 class="">Blog</h1>
+            <?php get_template_part('includes/section','archive'); ?>
+            <!-- Pagination Method 1 -->
             <?php previous_posts_link();  ?>
             <?php next_posts_link();  ?>
             <!-- Pagination Method 2 -->
@@ -20,11 +25,7 @@
                // ));
             ?>
          </div>
-         <div class="col-lg-3 widget">
-            <?php if(is_active_sidebar('blog-sidebar')) :?>
-            <?php dynamic_sidebar('blog-sidebar'); ?>
-            <?php endif; ?>
-         </div>
+         
       </section>
    </div>
 </section>
