@@ -1,4 +1,4 @@
-<?php get_header('secondary'); ?>
+<?php get_header(); ?>
   <section class="page-wrap">
     <div class="ml-5">
       <section class="row">
@@ -11,7 +11,7 @@
           <?php endif; ?>
         </div>
         <!-- main content -->
-        <div class="col-lg-9 mb-5">
+        <div class="col-lg-6 mb-5">
           <h1><?php the_title(); ?></h1>
           <?php get_template_part('includes/section','content'); ?>
         </div>

@@ -5,16 +5,25 @@ html, body {
 
 header{
     width:100%;
-    height: 100px;
+    /* height: 70px; */
+    margin:0;
   }
+
+.active{
+    background-color: white;
+}
 ul, li{
     list-style-type: none;
+    
   }
 
   .page-wrap{
     padding: 2rem 0;
   }
   .top-bar {
+    /* height:70px; */
+    margin:0;
+    padding:0;
     list-style: none;
     padding:20px;
     /* border:2px solid red; */
@@ -24,6 +33,11 @@ ul, li{
   }
   .top-bar a{
     padding: 0.25rem 1rem;
+  }
+  .menu-item a {
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
   }
   .top-bar li .sub-menu{
     /* margin-left: 135px; */
@@ -50,7 +64,7 @@ ul, li{
 /* FOOTER STYLES */
 
 .footer {
-    min-height: 100px;
+    overflow:auto;
     margin-top: -50px;
 }
 
@@ -162,4 +176,8 @@ ul, li{
     width: 50%;
     max-width: 100%;
     flex: 1 0 auto;
+}
+
+.col-1, .col-2{
+    width:100%!important;
 }

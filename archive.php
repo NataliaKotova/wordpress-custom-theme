@@ -1,7 +1,6 @@
 <?php get_header(''); ?>
-
 <section class="page-wrap">
-<div class="container">
+<div class="ml-3">
   <section class="row">
   <div class="col-lg-3 widget">
         <?php if(is_active_sidebar('blog-sidebar')) :?>
