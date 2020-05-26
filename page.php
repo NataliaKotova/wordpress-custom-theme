@@ -1,10 +1,10 @@
 <?php get_header(); ?>
+<!-- <div class=""><h1 class="display-4 text-center font-weight-bold"><?php the_title(); ?></h1></div> -->
   <section class="page-wrap">
-    <div class="ml-5">
       <section class="row">
         <!-- sidebar -->
-        <div class="col-lg-3 widget border border-top-0 border-left-0 border-bottom-0">
-          <?php if(get_the_title()!="Checkout"):?>
+        <div class="col-lg-3">
+          <?php if(get_the_title()!="Checkout" && get_the_title()!="Cart" && get_the_title()!="Shop online"):?>
           <?php if(is_active_sidebar('page-sidebar')) :?>
           <?php dynamic_sidebar('page-sidebar'); ?>
           <?php endif; ?>
@@ -12,10 +12,9 @@
         </div>
         <!-- main content -->
         <div class="col-lg-6 mb-5">
-          <h1><?php the_title(); ?></h1>
           <?php get_template_part('includes/section','content'); ?>
         </div>
       </section>
-    </div>
+    
   </section>
 <?php get_footer(); ?>

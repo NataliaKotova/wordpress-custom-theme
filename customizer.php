@@ -5,12 +5,12 @@ function mytheme_customize_register( $wp_customize ) {
 
   //header color
   $wp_customize->add_setting( 'header_color' , array(
-      'default'   => '#e9ecef',
+      'default'   => '#000000',
       'transport' => 'refresh',
   ) );
 
   $wp_customize->add_setting( 'header_text_color' , array(
-    'default'   => '#e9ecef',
+    'default'   => '#000000',
     'transport' => 'refresh',
   ) );
 
@@ -30,7 +30,8 @@ function mytheme_customize_register( $wp_customize ) {
     'section'    => 'Colors',
     'settings'   => 'header_text_color',
   ) ) );
-  
+
+
   //footer color
   $wp_customize->add_setting( 'footer_color' , array(
     'default'   => '#e9ecef',
@@ -54,8 +55,8 @@ function mytheme_customize_css_header()
     ?>
          <style type="text/css">
               header { background-color: <?php echo get_theme_mod('header_color', '#ffffff'); ?>; } 
-              
-              header .menu-item a { color: <?php echo get_theme_mod('header_text_color', '#ffffff'); ?>; }
+              header .navbar li a { color: <?php echo get_theme_mod('header_text_color', '#000000'); ?>; }
+              header .navbar-toggler{ border: <?php echo get_theme_mod('color', '#000000'); ?>; }
          </style>
     <?php
 }

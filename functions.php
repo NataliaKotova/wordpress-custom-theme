@@ -25,6 +25,24 @@ add_theme_support('menus');
 add_theme_support('post-thumbnails');
 add_theme_support('widgets');
 
+// menus
+register_nav_menus(
+  array(
+    'top-menu' => 'Top Menu Location',
+    'mobile-menu' => 'Mobile Menu Location',
+    'footer-menu' => 'Footer Menu Location',
+  )
+);
+
+//registering bootstrap navigation
+//Theme setup
+add_action( 'after_setup_theme', 'wpt_setup' );
+    if ( ! function_exists( 'wpt_setup' ) ):
+        function wpt_setup() {  
+            register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
+        } endif;
+require_once('wp_bootstrap_navwalker.php');
+
 
 function themename_custom_logo_setup() {
   $defaults = array(
@@ -40,16 +58,6 @@ function themename_custom_logo_setup() {
 
  
 add_theme_support( 'custom-logo' );
-
-
-// menus
-register_nav_menus(
-  array(
-    'top-menu' => 'Top Menu Location',
-    'mobile-menu' => 'Mobile Menu Location',
-    'footer-menu' => 'Footer Menu Location',
-  )
-);
 
 //custom image size
 add_image_size('blog-large', 800, 400, false);
@@ -233,12 +241,10 @@ function my_first_taxonomy(){
 
 add_action('init', 'my_first_taxonomy');
 
-//google fonts
-function add_google_fonts() {
-  wp_enqueue_style( ' add_google_fonts ', ' https://fonts.googleapis.com/css?family=Open+Sans:300,400', false );}  
-add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
-
-
 //customize API
 require_once get_template_directory() . '/customizer.php';
+require_once get_template_directory() . '/shortcodes.php';
+
+?>
+
 
