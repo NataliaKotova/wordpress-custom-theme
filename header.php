@@ -23,8 +23,13 @@
             <ul class="navbar-nav ml-auto mr-auto">
               <?php
                 $menuItems = wp_get_nav_menu_items(16);
+                echo is_single();
                   foreach ($menuItems as &$menu_item) {
+                    
                     $current = ( $menu_item->object_id == get_queried_object_id() ) ? 'active' : '';
+                    if(is_blog() && $menu_item->object_id == 17){
+                      $current = 'active';
+                    }
                     ?>
                       <li class="nav-item <?php echo $current?>">
                         <a class="nav-link font-weight-bold" href="<?php echo $menu_item->url?>" ><?php echo $menu_item->title?></a>
@@ -45,3 +50,5 @@
           
         </nav>
     </header>
+
+    

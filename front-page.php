@@ -10,6 +10,8 @@
                   </div>
                   <div class="col-lg-6">
                         <?php get_template_part('includes/section','content'); ?>
+                        <h1> <?php echo single_cat_title(); ?> </h1>
+                        <?php get_template_part('includes/section','allergies'); ?>
                   </div>
                   
             </section>

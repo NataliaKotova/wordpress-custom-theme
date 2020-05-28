@@ -241,9 +241,14 @@ function my_first_taxonomy(){
 
 add_action('init', 'my_first_taxonomy');
 
+
 //customize API
 require_once get_template_directory() . '/customizer.php';
 require_once get_template_directory() . '/shortcodes.php';
+
+function is_blog(){
+  return ( is_archive() || is_author() || is_category() || is_home() || is_single() || is_tag()) && 'post' == get_post_type();
+}
 
 ?>
 

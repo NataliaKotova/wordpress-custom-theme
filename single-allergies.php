@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header(); 
+echo "HELLO";
+?>
 
 <section class="page-wrap">
 <div class="container">
